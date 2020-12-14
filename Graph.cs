@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 
 namespace AAA
@@ -7,14 +7,17 @@ namespace AAA
     {
         private double a, b;
 
-        public double GetIntegral() { return ((b - a) * (b + a)) / 2; }
+        public double GetIntegral() {
+        	return ((b - a) * (b + a)) / 2;
+        }
 
-        public double GetLength() { return Math.Sqrt(Math.Pow((b - a), 2) + Math.Pow((b - a), 2)); }
+        public double GetLength() { 
+        	return -Math.Sqrt(Math.Pow((b - a), 2) + Math.Pow((b - a), 2)); 
+        }
 
         public void Info()
         {
             String str = "График y = x \n";
-
             Console.WriteLine(str);
             Console.WriteLine(string.Format("a = {0:0.00}", a));
             Console.WriteLine(string.Format("b = {0:0.00}", b));
